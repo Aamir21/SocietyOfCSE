@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+    
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+       
+    
+    </style>
+    
+
+
+</head>
+<body>
+
+    <div id="root">
+
+
+    </div>
+
+    <div id="root2"></div>
+
+    <script type="text/babel">
+
+    class MyHeader extends React.Component {
+        render() {
+            const mystyle = {
+                color: "red",
+                backgroundColor: "whitesmoke",
+                padding: "10px",
+                fontFamily: "League Spartan"
+            };
+
+            const mystyle2={
+                color:"green",
+                fontFamily:"bahnschrift"
+            };
+
+
+                return (
+                    <div>
+                    
+                        <h1 style={mystyle} onClick={this.myfunction}>Welcoming you!!!!!</h1>
+                        <p style={mystyle2}>Hello! {this.props.name}</p>
+                        <p style={mystyle2}>Hello! {this.props.name}</p>
+
+                        
+
+                    
+                    </div>
+                );
+        }
+    }
+
+
+    class Buttons extends React.Component{
+
+        shoot(){
+            alert("hfkjdshfkhskdjh");
+        
+        }
+
+        tran1(e){
+            e.target.style.background ='red';
+            e.target.style.transitionTimingFunction = 'ease-out';
+            e.target.style.transitionDelay = '0s';
+            e.target.style.transitionDuration = '0.1s';
+            e.target.style.transitionProperty = 'all';
+           // e.target.style.color = 'white';
+        }
+        tran2(e){
+            e.target.style.background ="linear-Gradient(90deg,darkorange, limegreen)";
+            e.target.style.backgroundSize = '300px';
+            e.target.style.transitionTimingFunction = 'ease-out';
+            e.target.style.transitionDelay = '0s';
+            e.target.style.transitionDuration = '0.1s';
+            e.target.style.transitionProperty = 'all';
+          //  e.target.style.color = 'black';
+        }
+        
+        
+       
+
+
+        render(){
+            const clicks={
+                width:"160px",
+                height:"60px",
+                border:"solid thin gray",
+                borderOpacity:"0.6",
+                borderRadius:"55px",
+                fontFamily:"Bahnschrift",
+                boxShadow:"0px 0px 3px grey",
+                cursor:"pointer",
+                background:"linear-Gradient(90deg,darkorange, limegreen)",
+                backgroundSize:"300px"
+
+
+            };
+
+            
+
+            return(
+                <button id="b1" style={clicks} onClick={this.shoot} onMouseOver={this.tran1} onMouseOut={this.tran2}>SignIN</button>
+                
+            )
+        }
+    }
+
+    ReactDOM.render(<MyHeader name="Abhishek" />, document.getElementById('root'));
+    ReactDOM.render(<MyHeader name="Binod"/>, document.getElementById('root'));
+    ReactDOM.render(<Buttons />, document.getElementById('root2'));
+    
+
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="menu">
+
+
+    </div>
+
+
+    <script type="text/babel">
+        
+        class Mains extends React.Component{
+
+
+            
+
+            render(){
+
+                const container = {
+
+                    width:"auto",
+                    height:"120px",
+                    backgroundColor:"crimson",
+                    padding:"0px 0px 0px 0px",
+                    margin:"0px 0px 0px 0px",
+                    position:"absolute",
+                    top:"0px",
+                    left:"0px",
+                    right:"0px"
+                };
+
+                const list = {
+                    float:"left",
+                    marginLeft:"90px",
+                    marginTop:"80px",
+                    fontFamily:"Bahnschrift",
+                    fontSize:"16px",
+                    listStyleType:"none"
+                };
+
+                const ul = {
+                   
+                    marginLeft:"530px",
+                    
+                };
+
+
+
+                return(
+                    <div style={container}>
+                        
+
+                        <ul style={ul}>
+                            <li style={list}>HOME</li>
+                            <li style={list}>CONTACTS</li>
+                            <li style={list}>BROCHURE</li>
+                            <li style={list}>ABOUT</li>
+                        </ul>
+                    </div>
+
+                );
+            }
+        
+
+
+        }
+
+        ReactDOM.render(<Mains />, document.getElementById('menu'));
+        
+        
+    
+    </script>
+    
+</body>
+</html>
